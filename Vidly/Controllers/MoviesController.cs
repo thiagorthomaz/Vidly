@@ -15,7 +15,35 @@ namespace Vidly.Controllers
 
             var movie = new Movie() { Name = "Shrek!" };
 
-            return HttpNotFound();
+            return View(movie);
+        }
+
+
+        public ActionResult Edit(int id) {
+
+
+            return Content("ID: " + id);
+
+        }
+
+
+        /**
+         * ? = optional
+         */
+        public ActionResult Index(int? pageIndex, string sortBy) {
+
+
+            if (!pageIndex.HasValue) {
+                pageIndex = 1;
+            }
+
+            if (String.IsNullOrWhiteSpace(sortBy)) {
+                sortBy = "Name";
+            }
+
+            return Content(String.Format("pageIndex={0}&sorBy={1}", pageIndex, sortBy));
+
+
         }
     }
 }
