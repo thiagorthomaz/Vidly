@@ -13,6 +13,8 @@ namespace Vidly
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();//This activate the attribute router
+
             routes.MapRoute(
                 "MoviesByReleaseDate",
                 "movies/released/{year}/{month}",
