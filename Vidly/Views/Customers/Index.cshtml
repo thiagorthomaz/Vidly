@@ -19,7 +19,7 @@
         {
         <tr>
             <td>@Html.ActionLink(@customer.Name, "Details", "Customers", new { id = customer.Id }, new { @class = "nav-link" })</td>
-            <td>@customer.Membership.DiscountRate%</td>
+            <td>@customer.Membership.Name</td>
         </tr>
             
         }
