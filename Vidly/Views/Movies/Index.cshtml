@@ -6,32 +6,32 @@
 }
 
 
-
 <h1>Movies</h1>
-<ul class="list-group">
 
-    <li class="list-group-item">
-        <strong>Movies</strong>
-    </li>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Movie</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(@movie.Name, "Details", "Movies", new { id = movie.Id }, new { @class = "nav-link" })</td>
+                <td>@movie.Genre.Name</td>
+            </tr>
 
-    @foreach (var movie in Model)
-    {
-        <li class="list-group-item">
-            @Html.ActionLink(@movie.Name, "Details", "Movies", new { id = movie.Id }, new { @class = "nav-link" })
+        }
+    </tbody>
 
-        </li>
-    }
+</table>
 
-    @if (Model.Count == 0)
-    {
-        <p> We don't have any movie yet.</p>
-    }
-
-
-
-
-</ul>
-
+@if (Model.Count == 0)
+{
+    <p> We don't have any movie yet.</p>
+}
 
 
 
