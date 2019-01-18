@@ -244,8 +244,17 @@
     <Compile Include="Migrations\201901170009019_AddCustomerBirthdate.Designer.cs">
       <DependentUpon>201901170009019_AddCustomerBirthdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901180021592_AddGenre.cs" />
+    <Compile Include="Migrations\201901180021592_AddGenre.Designer.cs">
+      <DependentUpon>201901180021592_AddGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901180023185_PopulateGenre.cs" />
+    <Compile Include="Migrations\201901180023185_PopulateGenre.Designer.cs">
+      <DependentUpon>201901180023185_PopulateGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -367,6 +376,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901170009019_AddCustomerBirthdate.resx">
       <DependentUpon>201901170009019_AddCustomerBirthdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901180021592_AddGenre.resx">
+      <DependentUpon>201901180021592_AddGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901180023185_PopulateGenre.resx">
+      <DependentUpon>201901180023185_PopulateGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
