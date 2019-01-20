@@ -7,7 +7,9 @@
 
 <h1>Customers</h1>
 
-<table class="table table-bordered table-hover" >
+@Html.ActionLink("New Customer", "New", "Customer", new { @class = "btn btn-primary" })
+
+<table class="table table-bordered table-hover">
     <thead>
         <tr>
             <th>Customer</th>
@@ -17,11 +19,11 @@
     <tbody>
         @foreach (var customer in Model)
         {
-        <tr>
-            <td>@Html.ActionLink(@customer.Name, "Edit", "Customers", new { id = customer.Id }, new { @class = "nav-link" })</td>
-            <td>@customer.Membership.Name</td>
-        </tr>
-            
+            <tr>
+                <td>@Html.ActionLink(@customer.Name, "Edit", "Customers", new { id = customer.Id }, new { @class = "nav-link" })</td>
+                <td>@customer.Membership.Name</td>
+            </tr>
+
         }
     </tbody>
 
