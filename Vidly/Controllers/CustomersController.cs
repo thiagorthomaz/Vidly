@@ -29,12 +29,12 @@ namespace Vidly.Controllers
         {
             var membershipType = this._context.MembershipTypes.ToList();
 
-            var viewModel = new NewCustomerViewModel
+            var viewModel = new CustomerFormViewModel
             {
                 MembershipTypes = membershipType
             };
 
-            return View(viewModel);
+            return View("CustomerForm", viewModel);
         }
 
         // GET: Customers
@@ -53,6 +53,49 @@ namespace Vidly.Controllers
         public List<Customer> List() {
             return this._context.Customers.Include(c => c.Membership).ToList();
         }
+
+        [HttpPost]
+        public ActionResult Save(Customer customer) {
+
+            if (customer.Id == 0)
+            {
+                this._context.Customers.Add(customer);
+            }
+            else {
+                var customerInDb = this._context.Customers.Single(c => c.Id == customer.Id);
+                customerInDb.Name = customer.Name;
+                customerInDb.Birthdate = customer.Birthdate;
+                customerInDb.MembershipId = customer.MembershipId;
+                customerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
+
+            }
+
+            this._context.SaveChanges();
+
+            return RedirectToAction("Index", "Customers");
+        }
+
+
+        public ActionResult Edit(int id)
+        {
+
+            var customer = this._context.Customers.SingleOrDefault(c => c.Id == id);
+
+            if (customer == null) {
+                return HttpNotFound();
+            }
+
+
+            CustomerFormViewModel viewModel = new CustomerFormViewModel {
+                Customer = customer,
+                MembershipTypes = this._context.MembershipTypes.ToList()
+            };
+            
+
+            return View("CustomerForm", viewModel);
+        }
+
+
 
     }
 }
