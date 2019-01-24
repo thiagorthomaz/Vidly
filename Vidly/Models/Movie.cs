@@ -11,19 +11,26 @@ namespace Vidly.Models
     {
 
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "Please inform movie's name")]
+        [Display(Name = "Movie's name")]
         public string Name { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please inform a genre")]
         [Display(Name= "Genre")]
         public byte GenreId { get; set; }
 
         public Genre Genre { get; set; }
 
         [Display(Name = "Release Date")]
+        [Required(ErrorMessage = "Please inform the release date")]
         public DateTime ReleaseDate { get; set; }
+
         public DateTime DateAdded { get; set; }
 
         [Display(Name = "Number in stock")]
+        [Required(ErrorMessage = "Please inform the stock")]
+        [Range(1,99)]
         public int Stock { get; set; }
 
 

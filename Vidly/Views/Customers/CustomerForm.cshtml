@@ -1,13 +1,13 @@
 ﻿@model Vidly.ViewModels.CustomerFormViewModel
 
 @{
-    ViewBag.Title = "New";
+    ViewBag.Title = "CustomerForm";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>New Customer</h2>
+<h2>@Model.Title</h2>
 
-@using (Html.BeginForm("Save", "Customers"))
+@using (Html.BeginForm("Save", "CustomerForm"))
 {
 
     @Html.ValidationSummary(true, "Please, fix de following errors.")
