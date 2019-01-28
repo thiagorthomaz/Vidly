@@ -66,7 +66,9 @@ namespace Vidly.Controllers.Api
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
+            var m = Mapper.CreateMap<CustomerDto, Customer>().ForMember(c => c.Id, opt => opt.Ignore());
             Mapper.Map(customerDto, customerInDb);
+
             /*
             customerInDb.IsSubscribedToNewsletter = customerDto.IsSubscribedToNewsletter;
             customerInDb.MembershipId = customerDto.MembershipId;
