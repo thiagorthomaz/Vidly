@@ -12,8 +12,11 @@ namespace Vidly
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
             */
-             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+             bundles.Add(new ScriptBundle("~/bundles/lib").Include(
                         "~/Scripts/jquery-3.2.1.js",
+                        "~/Scripts/bootstrap.js",
+                        "~/Scripts/bootbox.js",
+                        "~/Scripts/jquery.dataTables.js",
                         "~/Scripts/popper.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -24,13 +27,14 @@ namespace Vidly
             /*bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));*/
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/bootbox.js"));
+
             
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-lumen.css",
+                      "~/Content/bootstrap-theme.css",
+                      "~/Content/DataTables/jquery.dataTables.css",
+                      "~/Content/DataTables/dataTables.bootstrap.css",
                       "~/Content/site.css"));
         }
     }
