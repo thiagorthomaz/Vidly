@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Data.Entity;
 using System.Net.Http;
 using System.Web.Http;
 using Vidly.Dtos;
@@ -20,10 +21,15 @@ namespace Vidly.Controllers.Api
             _context = new ApplicationDbContext();
         }
 
-        public IEnumerable<MovieDto> GetMovies()
+        public IHttpActionResult GetMovies()
         {
-            return _context.Movies.ToList().Select(Mapper.Map<Movie, MovieDto>);
+            var moviesDtos = _context.Movies
+                .Include(m => m.Genre)
+                .ToList()
+                .Select(Mapper.Map<Movie, MovieDto>);
+            return Ok(moviesDtos);
         }
+
 
         public IHttpActionResult GetMovie(int id)
         {
@@ -49,6 +55,7 @@ namespace Vidly.Controllers.Api
             }
 
             var movie = Mapper.Map<MovieDto, Movie>(movieDto);
+
             _context.Movies.Add(movie);
             _context.SaveChanges();
 
@@ -72,8 +79,12 @@ namespace Vidly.Controllers.Api
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
-            var mapper = Mapper.CreateMap<MovieDto, Movie>().ForMember(m => m.Id, opt => opt.Ignore());
-            Mapper.Map(movieDto, movieInDb);
+            var config = new MapperConfiguration(cfg => {
+                cfg.CreateMap<MovieDto, Movie>();
+            });
+
+            IMapper mapper = config.CreateMapper();
+            movieInDb = mapper.Map<MovieDto, Movie>(movieDto);
 
             _context.SaveChanges();
 

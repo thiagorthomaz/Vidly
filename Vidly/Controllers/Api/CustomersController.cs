@@ -5,15 +5,15 @@ using System.Linq;
 using System.Net;
 using System.Data.Entity;
 using System.Net.Http;
-using System.Web.Http;
+using System.Web;
 using Vidly.Dtos;
 using Vidly.Models;
+using System.Web.Http;
 
 namespace Vidly.Controllers.Api
 {
     public class CustomersController : ApiController
     {
-
 
         private ApplicationDbContext _context;
 
