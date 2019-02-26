@@ -284,6 +284,22 @@
     <Compile Include="Migrations\201902260023536_SeedUsers.Designer.cs">
       <DependentUpon>201902260023536_SeedUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902262248552_AddedNameToApplicationUser.cs" />
+    <Compile Include="Migrations\201902262248552_AddedNameToApplicationUser.Designer.cs">
+      <DependentUpon>201902262248552_AddedNameToApplicationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902262251005_RenamedNameToUpperCaseApplicationUser.cs" />
+    <Compile Include="Migrations\201902262251005_RenamedNameToUpperCaseApplicationUser.Designer.cs">
+      <DependentUpon>201902262251005_RenamedNameToUpperCaseApplicationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902262252031_DeletedNameToUpperCaseApplicationUser.cs" />
+    <Compile Include="Migrations\201902262252031_DeletedNameToUpperCaseApplicationUser.Designer.cs">
+      <DependentUpon>201902262252031_DeletedNameToUpperCaseApplicationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902262253477_AddedCPFToApplicationUser.cs" />
+    <Compile Include="Migrations\201902262253477_AddedCPFToApplicationUser.Designer.cs">
+      <DependentUpon>201902262253477_AddedCPFToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Genre.cs" />
@@ -499,6 +515,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902260023536_SeedUsers.resx">
       <DependentUpon>201902260023536_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902262248552_AddedNameToApplicationUser.resx">
+      <DependentUpon>201902262248552_AddedNameToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902262251005_RenamedNameToUpperCaseApplicationUser.resx">
+      <DependentUpon>201902262251005_RenamedNameToUpperCaseApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902262252031_DeletedNameToUpperCaseApplicationUser.resx">
+      <DependentUpon>201902262252031_DeletedNameToUpperCaseApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902262253477_AddedCPFToApplicationUser.resx">
+      <DependentUpon>201902262253477_AddedCPFToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

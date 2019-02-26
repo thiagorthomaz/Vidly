@@ -65,6 +65,12 @@ namespace Vidly.Models
     public class RegisterViewModel
     {
         [Required]
+        [StringLength(11)]
+        [RegularExpression("^[0-9]*$", ErrorMessage = "CPF must be numeric")]
+        [Display(Name = "CPF")]
+        public string CPF { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
