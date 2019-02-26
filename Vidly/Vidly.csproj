@@ -280,6 +280,10 @@
     <Compile Include="Migrations\201901232345208_DatabaseUpdate.Designer.cs">
       <DependentUpon>201901232345208_DatabaseUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902260023536_SeedUsers.cs" />
+    <Compile Include="Migrations\201902260023536_SeedUsers.Designer.cs">
+      <DependentUpon>201902260023536_SeedUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Genre.cs" />
@@ -490,6 +494,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901232345208_DatabaseUpdate.resx">
       <DependentUpon>201901232345208_DatabaseUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902260023536_SeedUsers.resx">
+      <DependentUpon>201902260023536_SeedUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

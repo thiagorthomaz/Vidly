@@ -6,7 +6,7 @@
 
     <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
-            
+
             <li class="nav-item">@Html.ActionLink("Customer", "", "Customers", new object { }, new { @class = "nav-link" })</li>
             <li class="nav-item">@Html.ActionLink("Movies", "", "Movies", new object { }, new { @class = "nav-link" })</li>
             <li class="nav-item">@Html.ActionLink("Random", "Random", "Movies", new object { }, new { @class = "nav-link" })</li>
@@ -16,5 +16,6 @@
             <input class="form-control mr-sm-2" type="text" placeholder="Search">
             <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
         </form>
+        @Html.Partial("_LoginPartial")
     </div>
 </nav>
