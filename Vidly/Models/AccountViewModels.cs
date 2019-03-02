@@ -8,6 +8,10 @@ namespace Vidly.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+        [Required]
+        [StringLength(11)]
+        [RegularExpression("^[0-9]*$", ErrorMessage = "CPF must be numeric")]
+        public string CPF { get; set; }
     }
 
     public class ExternalLoginListViewModel
