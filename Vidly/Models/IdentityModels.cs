@@ -17,6 +17,11 @@ namespace Vidly.Models
         [RegularExpression("^[0-9]*$", ErrorMessage = "CPF must be numeric")]
         public string CPF { get; set; }
 
+        [Required]
+        [StringLength(14)]
+        [RegularExpression("^[0-9]*$", ErrorMessage = "Phone must be numeric")]
+        public string Phone { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType

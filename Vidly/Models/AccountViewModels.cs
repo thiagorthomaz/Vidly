@@ -12,6 +12,12 @@ namespace Vidly.Models
         [StringLength(11)]
         [RegularExpression("^[0-9]*$", ErrorMessage = "CPF must be numeric")]
         public string CPF { get; set; }
+
+        [Required]
+        [StringLength(14)]
+        [RegularExpression("^[0-9]*$", ErrorMessage = "Phone must be numeric")]
+        public string Phone { get; set; }
+
     }
 
     public class ExternalLoginListViewModel
@@ -73,6 +79,11 @@ namespace Vidly.Models
         [RegularExpression("^[0-9]*$", ErrorMessage = "CPF must be numeric")]
         [Display(Name = "CPF")]
         public string CPF { get; set; }
+
+        [Required]
+        [StringLength(14)]
+        [RegularExpression("^[0-9]*$", ErrorMessage = "Phone must be numeric")]
+        public string Phone { get; set; }
 
         [Required]
         [EmailAddress]

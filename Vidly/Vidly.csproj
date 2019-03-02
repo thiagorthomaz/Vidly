@@ -300,6 +300,10 @@
     <Compile Include="Migrations\201902262253477_AddedCPFToApplicationUser.Designer.cs">
       <DependentUpon>201902262253477_AddedCPFToApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903022125490_AddPhoneToIdentity.cs" />
+    <Compile Include="Migrations\201903022125490_AddPhoneToIdentity.Designer.cs">
+      <DependentUpon>201903022125490_AddPhoneToIdentity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Genre.cs" />
@@ -527,6 +531,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902262253477_AddedCPFToApplicationUser.resx">
       <DependentUpon>201902262253477_AddedCPFToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903022125490_AddPhoneToIdentity.resx">
+      <DependentUpon>201903022125490_AddPhoneToIdentity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
