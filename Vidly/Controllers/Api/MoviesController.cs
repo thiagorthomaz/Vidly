@@ -65,7 +65,7 @@ namespace Vidly.Controllers.Api
         }
 
         [HttpPut]
-        public MovieDto UpdateCustomer(int id, MovieDto movieDto)
+        public MovieDto UpdateMovie(int id, MovieDto movieDto)
         {
             if (!ModelState.IsValid)
             {

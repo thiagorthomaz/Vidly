@@ -3,22 +3,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Vidly.Models
 {
-    public class ExternalLoginConfirmationViewModel
-    {
-        [Required]
-        [Display(Name = "Email")]
-        public string Email { get; set; }
-        [Required]
-        [StringLength(11)]
-        [RegularExpression("^[0-9]*$", ErrorMessage = "CPF must be numeric")]
-        public string CPF { get; set; }
-
-        [Required]
-        [StringLength(14)]
-        [RegularExpression("^[0-9]*$", ErrorMessage = "Phone must be numeric")]
-        public string Phone { get; set; }
-
-    }
 
     public class ExternalLoginListViewModel
     {
