@@ -11,10 +11,10 @@ namespace Vidly.Models
         public int Id { get; set; }
 
         [Required]
-        public Customer customer { get; set; }
+        public Customer Customer { get; set; }
 
         [Required]
-        public Movie movie { get; set; }
+        public Movie Movie { get; set; }
 
         [Required]
         public DateTime DateRentend { get; set; }

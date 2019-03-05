@@ -314,6 +314,10 @@
     <Compile Include="Migrations\201903052036459_CreatedRental1.Designer.cs">
       <DependentUpon>201903052036459_CreatedRental1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903052045477_UpperCaseRental.cs" />
+    <Compile Include="Migrations\201903052045477_UpperCaseRental.Designer.cs">
+      <DependentUpon>201903052045477_UpperCaseRental.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -553,6 +557,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903052036459_CreatedRental1.resx">
       <DependentUpon>201903052036459_CreatedRental1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903052045477_UpperCaseRental.resx">
+      <DependentUpon>201903052045477_UpperCaseRental.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
