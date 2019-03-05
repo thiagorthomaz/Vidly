@@ -17,20 +17,25 @@ namespace Vidly.Controllers.Api
         [HttpPost]
         public IHttpActionResult CreateNewRental(RentalDto rentalDto) {
 
-            var customer = _context.Rentals.Single(c => c.Id == rentalDto.CustomerId);
+            var customer = _context.Customers.Single(c => c.Id == rentalDto.CustomerId);
             var movies = _context.Movies.Where(m => rentalDto.MoviesId.Contains(m.Id));
 
             foreach (var movie in movies) {
 
                 var rental = new Rental {
-                    //Customer = customer,
+                    Customer = customer,
                     Movie = movie,
                     DateRentend = DateTime.Now
                 };
 
+                _context.Rentals.Add(rental);
+
             }
 
-            throw new NotImplementedException();
+            _context.SaveChanges();
+
+            return Ok();
+
         }
 
     }

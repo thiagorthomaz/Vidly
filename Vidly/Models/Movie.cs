@@ -34,5 +34,8 @@ namespace Vidly.Models
         public int Stock { get; set; }
 
 
+        [Range(1, 99)]
+        public int NumberAvailable { get; set; }
+
     }
 }

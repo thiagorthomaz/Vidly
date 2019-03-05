@@ -16,9 +16,11 @@ namespace Vidly.App_Start
                 cfg.CreateMap<Customer, CustomerDto>();
                 cfg.CreateMap<Movie, MovieDto>();
                 cfg.CreateMap<MembershipType, MembershipTypeDto>();
+                cfg.CreateMap<Rental, RentalDto>();
 
                 cfg.CreateMap<CustomerDto, Customer>().ForMember(c => c.Id, opt => opt.Ignore());
                 cfg.CreateMap<MovieDto, Movie>().ForMember(m => m.Id, opt => opt.Ignore());
+                cfg.CreateMap<RentalDto, Rental>().ForMember(r => r.Id, opt => opt.Ignore());
             });
 
 
