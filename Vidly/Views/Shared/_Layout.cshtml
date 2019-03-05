@@ -13,8 +13,10 @@
         It's possible to passa viewMode through the partial.
         If I declare a Model on and don't pass it, the model one declared on this view will be automaticaly pass through this partial view
     *@
-    @Html.Partial("_NavBar")
+    
     <div class="container body-content">
+        @Html.Partial("_NavBar")
+
         @RenderBody()
         <hr />
         <footer>
